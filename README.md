@@ -5,6 +5,7 @@ Jekyll Boilerplate is a lightweight and cleaned up version of the initial [Jekyl
 ## Features
 
 * Ionic v.8.0
+* Google Auth
 
 ### Additions
 
@@ -29,3 +30,4 @@ Jekyll Boilerplate is a lightweight and cleaned up version of the initial [Jekyl
 
 * [Jekyll](https://jekyllrb.com/)
 * [Ionic Fameworks](https://ionicframework.com/docs/)
+* [DEMO](https://)
