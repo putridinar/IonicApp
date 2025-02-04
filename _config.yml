@@ -34,3 +34,12 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+# G auth
+apiKey: AIzaSyD4HDbu_O051zCRV-d3as_Yt5O3SPVd4lE
+authDomain: vems-online.firebaseapp.com
+projectId: vems-online
+storageBucket: vems-online.firebasestorage.app
+messagingSenderId: 193056574028
+appId: 1:193056574028:web:d8084247e5bd84970482e9
+measurementId: G-DTVMRL9P8P
