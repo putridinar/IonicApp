@@ -5,8 +5,20 @@
           <ion-title>Home</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
-        <div class="tab-content">Listen now content</div>
+      <ion-content class="ion-padding" style="display: contents;">
+        <div class="tab-container">
+			<div class="grid-card">
+			{% for grid in site.data.terbaru %}
+			<ion-card>
+				<img class="img-home-grid" alt="{{grid.title}}" src="{{grid.img}}" />
+				<ion-card-header>
+					<ion-card-title>Rp. {{grid.harga}}</ion-card-title>
+					<ion-card-subtitle>{{grid.title}}</ion-card-subtitle>
+				</ion-card-header>
+			</ion-card>
+			{% endfor %}
+			</div>
+		</div>
       </ion-content>
     </div>
   </ion-tab>

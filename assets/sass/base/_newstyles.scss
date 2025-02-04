@@ -1,0 +1,23 @@
+.tab-container {
+    max-width: 1024px;
+	width: 100%;
+    margin: auto;
+    padding: 50px 0;
+}
+.grid-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+	@include mobile {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0;
+	}
+}
+.img-home-grid {
+    object-fit: cover;
+    background-position: center;
+    height: 210px;
+	@include mobile {
+		height: 150px;
+	}
+}
