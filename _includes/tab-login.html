@@ -1,0 +1,37 @@
+  <ion-tab tab="login">
+    <div id="login-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Login</ion-title>
+		  <ion-buttons slot="end">
+			<ion-toggle id="paletteToggle"></ion-toggle>
+		  </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content style="display: contents;">
+    <div class="signin_box">
+	<ion-card id="user-signed-out" class="box_login">
+		  <img alt="Google Login" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" />
+		  <ion-card-header>
+			<ion-card-title class="text-center">Masuk Menggunakan Google</ion-card-title>
+			<ion-card-subtitle class="text-center">Untuk melanjutkan silahkan login dengan google.</ion-card-subtitle>
+		  </ion-card-header>
+                  <ion-button expand="block" id="sign-in-button" fill="clear">Sign in</ion-button>
+	</ion-card>
+		</div>
+      </ion-content>
+    </div>
+  </ion-tab>
+<script type="module">
+const firebaseConfig = {
+	apiKey: "{{ site.apiKey }}",
+	authDomain: "{{ site.authDomain }}",
+	databaseURL: "{{ site.databaseURL }}",
+	projectId: "{{ site.projectId }}",
+	storageBucket: "{{ site.storageBucket }}",
+	messagingSenderId: "{{ site.messagingSenderId }}",
+	appId: "{{ site.appId }}",
+	measurementId: "{{ site.measurementId }}"
+};firebase.initializeApp(firebaseConfig);const auth=firebase.auth();const userSignedInDiv=document.getElementById('user-signed-in');const signInButton=document.getElementById('sign-in-button');function toggleUI(){if(auth.currentUser){location.href="{{site.baseurl}}/home"}else{document.getElementById('tab-button-akun').style.display  = 'none';}}
+signInButton.addEventListener('click',()=>{const provider=new firebase.auth.GoogleAuthProvider();auth.signInWithPopup(provider)});auth.onAuthStateChanged(user=>{toggleUI()})
+</script>

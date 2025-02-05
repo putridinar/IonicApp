@@ -1,11 +1,11 @@
 ---
 ---
-@charset "utf-8";
+@charset 'utf-8';
 
 @import 'util/normalize';
 
 @import 'base/root';
 
-@import 'base/newstyles';
+@import 'base/styles';
 
 @import '../vendor/@ionic/core/css/palettes/dark.class.css';

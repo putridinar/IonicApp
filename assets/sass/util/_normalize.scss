@@ -441,6 +441,10 @@ template {
 /**
  * Add the correct display in IE 10-.
  */
+ 
+.text-center {
+    text-align: center;
+}
 
 [hidden] {
   display: none;

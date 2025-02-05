@@ -3,9 +3,32 @@ const firebaseConfig = {
   apiKey: "{{site.apiKey}}",
   authDomain: "{{site.authDomain}}",
   projectId: "{{site.projectId}}",
+  databaseURL: "{{ site.databaseURL }}",
   storageBucket: "{{site.storageBucket}}",
   messagingSenderId: "{{site.messagingSenderId}}",
   appId: "{{site.appId}}",
   measurementId: "{{site.measurementId}}"
 };
+      firebase.initializeApp(firebaseConfig);
+      
+      const auth = firebase.auth();
+      
+      const userSignedInDiv = document.getElementById('user-signed-in');
+      const logInButton = document.getElementById('log-in-button');
+
+      function toggleUI() {
+        if (auth.currentUser) {
+		document.getElementById(logiin).style.display = 'none';
+          location.href = "{{site.baseurl}}/home";
+        }
+      }
+      
+      logInButton.addEventListener('click', () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        auth.signInWithPopup(provider);
+      });
+      
+      auth.onAuthStateChanged(user => {
+        toggleUI();
+      });
 </script>
