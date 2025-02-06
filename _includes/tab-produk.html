@@ -6,7 +6,16 @@
         </ion-toolbar>
       </ion-header>
       <ion-content style="display: contents;">
-        <div class="tab-container">Produk content</div>
+        <div class="tab-container post-produk">
+		{% for product in site.posts %}
+			<ion-card>
+				<img class="product-thumb" src="{{ product.featured_image_path }}">
+				<div class="desc-box">
+					<span class="product-price">Rp.{{product.price}}</span>
+				</div>
+			</ion-card>
+		{% endfor %}
+		</div>
       </ion-content>
     </div>
   </ion-tab>

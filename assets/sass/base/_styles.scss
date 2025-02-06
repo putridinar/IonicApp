@@ -4,6 +4,30 @@
     margin: auto;
     padding: 60px 0;
 }
+
+.product-thumb {
+	object-fit: cover;
+	background-position: center;
+	width: 100%;
+    height: 340px;
+	@include mobile {
+        height: 400px;
+		}
+}
+
+.desc-box {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background: #25202030;
+    width: 100%;
+    box-shadow: -1px -4px 16px -5px #000000c4;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .grid-card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
