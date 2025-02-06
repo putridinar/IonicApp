@@ -1,3 +1,6 @@
+---
+layout: default
+---
   <ion-tab tab="produk">
     <div id="produk-page">
       <ion-header>
@@ -7,17 +10,8 @@
       </ion-header>
       <ion-content style="display: contents;">
         <div class="tab-container post-produk">
-		{% for product in site.posts %}
-			<ion-card>
-				<img class="product-thumb" src="{{ product.featured_image_path }}">
-				<a href="{{product.url}}">
-				<div class="desc-box">
-					<span class="product-price">Rp.{{product.price}}</span>
-				</div>
-				</a>
-			</ion-card>
-		{% endfor %}
 		</div>
       </ion-content>
     </div>
   </ion-tab>
+  {% include auth.html %}

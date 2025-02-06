@@ -18,15 +18,7 @@ const firebaseConfig = {
 
       function toggleUI() {
         if (auth.currentUser) {
-		document.getElementById(logiin).style.display = 'none';
-          location.href = "{{site.baseurl}}/home";
-        }
-      }
-      
-      logInButton.addEventListener('click', () => {
-        const provider = new firebase.auth.GoogleAuthProvider();
-        auth.signInWithPopup(provider);
-      });
+		document.getElementById('tab-button-login').style.display = 'none';}else{document.getElementById('tab-button-akun').style.display  = 'none';}}
       
       auth.onAuthStateChanged(user => {
         toggleUI();

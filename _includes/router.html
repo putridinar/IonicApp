@@ -1,23 +1,45 @@
 <ion-router>
-  <ion-route component="page-tabs">
-    <ion-route url="/schedule" component="tab-schedule">
-      <ion-route component="page-schedule"></ion-route>
-      <ion-route url="/session/:sessionId" component="page-session"></ion-route>
-    </ion-route>
-
-    <ion-route url="/speakers" component="tab-speaker">
-      <ion-route component="page-speaker-list"></ion-route>
-      <ion-route url="/session/:sessionId" component="page-session"></ion-route>
-      <ion-route url="/:speakerId" component="page-speaker-detail"></ion-route>
-    </ion-route>
-
-    <ion-route url="/map" component="page-map"></ion-route>
-    <ion-route url="/about" component="page-about"></ion-route>
-  </ion-route>
-
-  <ion-route url="/tutorial" component="page-tutorial"></ion-route>
-  <ion-route url="/login" component="page-login"></ion-route>
-  <ion-route url="/account" component="page-account"></ion-route>
-  <ion-route url="/signup" component="page-signup"></ion-route>
-  <ion-route url="/support" component="page-support"></ion-route>
+  <ion-route url="/" component="page-one"></ion-route>
+  <ion-route url="/page-two" component="page-two"></ion-route>
 </ion-router>
+
+<ion-router-outlet></ion-router-outlet>
+
+<script>
+  class PageOne extends HTMLElement {
+    connectedCallback() {
+      this.innerHTML = `
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Page One</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      This is the content for page 1.
+      <ion-router-link href="#/page-two">
+        <ion-button>Go to Page 2</ion-button>
+      </ion-router-link>
+    </ion-content>`;
+    }
+  }
+
+  class PageTwo extends HTMLElement {
+    connectedCallback() {
+      this.innerHTML = `
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Page Two</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      This is the content for page 2.
+    </ion-content>`;
+    }
+  }
+
+  customElements.define('page-one', PageOne);
+  customElements.define('page-two', PageTwo);
+</script>

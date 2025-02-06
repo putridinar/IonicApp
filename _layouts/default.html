@@ -14,30 +14,4 @@
 	</ion-app>
 
 </body>
-<script>
-  const toggle = document.querySelector('#paletteToggle');
-
-  toggle.addEventListener('ionChange', (event) => {
-    toggleDarkPalette(event.detail.checked);
-  });
-
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-  initializeDarkPalette(prefersDark.matches);
-
-  prefersDark.addEventListener('change', (mediaQuery) => initializeDarkPalette(mediaQuery.matches));
-
-  function initializeDarkPalette(isDark) {
-    toggle.checked = isDark;
-    toggleDarkPalette(isDark);
-  }
-
-  function checkToggle(shouldCheck) {
-    toggle.checked = shouldCheck;
-  }
-
-  function toggleDarkPalette(shouldAdd) {
-    document.documentElement.classList.toggle('ion-palette-dark', shouldAdd);
-  }
-</script>
 </html>
