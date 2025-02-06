@@ -5,9 +5,9 @@
           <ion-title>Home</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content class="ion-padding" style="display: contents;">
-	  {% include likeCarousel.html %}
+      <ion-content style="display: contents;">
         <div class="tab-container">
+	  {% include banner.html %}
 			<div class="grid-card">
 			{% for grid in site.data.terbaru %}
 			<ion-card>

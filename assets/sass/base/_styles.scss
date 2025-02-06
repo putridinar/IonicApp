@@ -2,7 +2,7 @@
     max-width: 1024px;
 	width: 100%;
     margin: auto;
-    padding: 50px 0;
+    padding: 60px 0;
 }
 .grid-card {
     display: grid;
@@ -25,4 +25,22 @@
     max-width: 380px;
     width: 100%;
     margin: 75px auto 0px;
+}
+ion-col {
+    background-color: #135d54;
+    border: solid 1px #fff;
+    color: #fff;
+    text-align: center;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0 10px;
+	@include mobile {
+		height: 100px;
+	}
+}
+ion-thumbnail {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
 }
