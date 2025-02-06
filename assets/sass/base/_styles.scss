@@ -4,6 +4,15 @@
     margin: auto;
     padding: 60px 0;
 }
+.post-produk {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	height: 480px;
+	@include mobile {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0;
+        height: 400px;
+	}
 
 .product-thumb {
 	object-fit: cover;
@@ -11,7 +20,7 @@
 	width: 100%;
     height: 340px;
 	@include mobile {
-        height: 400px;
+        height: 265px;
 		}
 }
 
@@ -26,6 +35,7 @@
     box-shadow: -1px -4px 16px -5px #000000c4;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
 }
 
 .grid-card {
