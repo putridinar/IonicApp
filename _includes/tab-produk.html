@@ -9,7 +9,7 @@
         <div class="tab-container post-produk">
 		{% for product in site.data.produk %}
 			<ion-card>
-				<img class="product-thumb" src="{{ product.featured_image_path }}">
+				<img class="product-thumb" src="{{ product.image }}">
 				<a href="javascript();" onclick="openModal({{ product.id }})">
 				<div class="desc-box">
 					<span class="product-price">Rp.{{product.price}}</span>
