@@ -10,7 +10,7 @@
 		{% for product in site.posts %}
 			<ion-card>
 				<img class="product-thumb" src="{{ product.featured_image_path }}">
-				<a href="{{product.url}}">
+				<a href="javascript();" onclick="openModal({{ product.id }})">
 				<div class="desc-box">
 					<span class="product-price">Rp.{{product.price}}</span>
 				</div>
