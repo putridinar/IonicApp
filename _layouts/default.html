@@ -13,5 +13,43 @@
 		</ion-content>
 	</ion-app>
   <script src="{{ '/assets/js/app.js?v=0.1.0' | relative_url }}"></script>
+
+  <!-- Modal -->
+  <ion-modal id="productModal">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title id="modalTitle">Produk</ion-title>
+        <ion-buttons slot="end">
+          <ion-button onclick="closeModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <img id="modalImage" src="" alt="Product Image" style="width: 100%;" />
+      <p id="modalDescription"></p>
+      <h2 id="modalPrice"></h2>
+    </ion-content>
+  </ion-modal>
+</ion-content>
+
+<script>
+  var modal = document.getElementById('productModal');
+  var products = {{ site.data.products | jsonify }}; // Ambil data dari Jekyll
+
+  function openModal(productId) {
+    var product = products.find(p => p.id === productId);
+    if (product) {
+      document.getElementById('modalTitle').textContent = product.name;
+      document.getElementById('modalImage').src = product.image;
+      document.getElementById('modalDescription').textContent = product.description;
+      document.getElementById('modalPrice').textContent = "$" + product.price;
+      modal.isOpen = true;
+    }
+  }
+
+  function closeModal() {
+    modal.isOpen = false;
+  }
+</script>
 </body>
 </html>
