@@ -1,0 +1,10 @@
+- id: 1
+  name: "Produk A"
+  image: "/assets/img/product-a.jpg"
+  description: "Deskripsi Produk A"
+  price: 100
+- id: 2
+  name: "Produk B"
+  image: "/assets/img/product-b.jpg"
+  description: "Deskripsi Produk B"
+  price: 200
