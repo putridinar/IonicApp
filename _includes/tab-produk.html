@@ -7,7 +7,7 @@
       </ion-header>
       <ion-content style="display: contents;">
         <div class="tab-container post-produk">
-		{% for product in site.posts %}
+		{% for product in site.data.produk %}
 			<ion-card>
 				<img class="product-thumb" src="{{ product.featured_image_path }}">
 				<a href="javascript();" onclick="openModal({{ product.id }})">
