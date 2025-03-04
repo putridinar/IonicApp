@@ -10,7 +10,7 @@ document.addEventListener("click", function() {
     }
 });
 
-document.addEventListener("touchstart", function() {
+<!--document.addEventListener("touchstart", function() {
     let elem = document.documentElement;
     
     if (!document.fullscreenElement && !document.webkitFullscreenElement) {
@@ -20,4 +20,4 @@ document.addEventListener("touchstart", function() {
             elem.webkitRequestFullscreen();
         }
     }
-});
+});-->
