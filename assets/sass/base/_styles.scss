@@ -85,7 +85,10 @@
 .signin_box {
     max-width: 380px;
     width: 100%;
-    margin: 75px auto 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 ion-col {
     background-color: #135d54;

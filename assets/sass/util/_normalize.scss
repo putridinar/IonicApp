@@ -439,7 +439,6 @@ template {
   display: none;
 }
 
-// Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 720px) {
     @content;
