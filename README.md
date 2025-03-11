@@ -30,4 +30,4 @@ Jekyll Boilerplate is a lightweight and cleaned up version of the initial [Jekyl
 
 * [Jekyll](https://jekyllrb.com/)
 * [Ionic Fameworks](https://ionicframework.com/docs/)
-* [DEMO](https://)
+* [DEMO](https://jekyll-ionic.vercel.app/)

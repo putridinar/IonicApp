@@ -476,7 +476,7 @@ ion-modal {
 			@include mobile {
 				max-width: 680px;
 				width: 100%;
-				height: 380px;
+				height: auto;
 			}
 		}
 		ion-card.desc-section {
