@@ -439,8 +439,6 @@ template {
   display: none;
 }
 
-@mixin mobile {
-  @media screen and (max-width: 720px) {
-    @content;
-  }
+.pointer {
+    cursor: pointer;
 }

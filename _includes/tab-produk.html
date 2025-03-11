@@ -64,7 +64,7 @@
         productGrid.innerHTML = data
           .map(
             (grid, index) => `
-            <ion-card onclick="openModal(${index})">
+            <ion-card class="pointer" onclick="openModal(${index})">
               <img class="img-home-grid" alt="${grid.title}" src="${grid.img}" />
               <ion-card-header class="text-center">
                 <ion-card-title>${grid.title}</ion-card-title>

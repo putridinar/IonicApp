@@ -1,25 +1,25 @@
 [
   {
     "title": "Produk A",
-    "harga": "100000",
+    "harga": "100.000",
     "img": "https://ionicframework.com/docs/img/demos/card-media.png",
     "description": "Deskripsi lengkap untuk Produk A. Produk ini sangat berkualitas dan cocok untuk berbagai keperluan."
   },
   {
     "title": "Produk B",
-    "harga": "150000",
+    "harga": "150.000",
     "img": "https://ionicframework.com/docs/img/demos/card-media.png",
     "description": "Deskripsi lengkap untuk Produk B. Produk ini memiliki fitur unggulan dan harga yang terjangkau."
   },
   {
     "title": "Produk C",
-    "harga": "100000",
+    "harga": "100.000",
     "img": "https://ionicframework.com/docs/img/demos/card-media.png",
     "description": "Deskripsi lengkap untuk Produk A. Produk ini sangat berkualitas dan cocok untuk berbagai keperluan."
   },
   {
     "title": "Produk D",
-    "harga": "150000",
+    "harga": "150.000",
     "img": "https://ionicframework.com/docs/img/demos/card-media.png",
     "description": "Deskripsi lengkap untuk Produk B. Produk ini memiliki fitur unggulan dan harga yang terjangkau."
   }

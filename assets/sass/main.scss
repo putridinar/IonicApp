@@ -1,8 +1,2 @@
-
-@import 'util/normalize';
-
-@import 'base/root';
-
-@import 'base/styles';
-
+@use 'scss/index' as *;
 @import '../vendor/@ionic/core/css/palettes/dark.system.css';
