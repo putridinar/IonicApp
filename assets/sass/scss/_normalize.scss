@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 html {
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -441,4 +443,46 @@ template {
 
 .pointer {
     cursor: pointer;
+}
+
+:host {
+  --height: 100%;
+  --width: 100%;
+}
+
+.fullscreen-modal {
+  --min-height: 100vh;  /* Ensure it takes up the full viewport height */
+  --min-width: 100vw;   /* Ensure it takes up the full viewport width */
+  --border-radius: 0;   /* Optional: remove border radius */
+  --background: transparent; /* Optional: make background transparent if needed */
+}
+
+ion-modal {
+  --height: 100%;
+  --width: 100%;
+	div.modal-container {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: row;
+		@include mobile {
+			flex-wrap: wrap;
+			}
+		img#modal-img.modal-img {
+			width: 680px;
+			height: 480px;
+			object-fit: cover;
+			background-position: center;
+			border-radius: 16px;
+			@include mobile {
+				width: 100%;
+				height: 380px;
+			}
+		}
+		ion-card.desc-section {
+			margin: 0 16px;
+		@include mobile {
+			margin: 16px 0;
+			}
+		}
+	}
 }

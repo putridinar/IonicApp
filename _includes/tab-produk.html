@@ -18,8 +18,8 @@
   </ion-tab>
 
 <!-- Modal untuk Menampilkan Detail Produk -->
-<ion-modal id="product-modal">
-  <div class="modal-content">
+<ion-modal id="product-modal" class="fullscreen-modal">
+  <div class="modal-content simpleCart_shelfItem">
     <ion-header>
       <ion-toolbar>
         <ion-title id="modal-title"></ion-title>
@@ -30,17 +30,32 @@
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding" style="height:600px;">
+    <ion-content class="ion-padding" style="height:100vh;">
       <div class="modal-container">
 	  <section class="img-section">
       <img id="modal-img" class="modal-img" />
 	  </section>
-	  <section class="desc-section">
-      <div class="text-center">
-        <h2 id="modal-price"></h2>
-        <p id="modal-description"></p>
-      </div>
-	  </section>
+	  <ion-card class="desc-section">
+		  <ion-card-header>
+			  <ion-card-title>
+				<h2 id="modal-price"></h2>
+			  </ion-card-title>
+			<ion-card-subtitle id="modal-stok"></ion-card-subtitle>
+		  </ion-card-header>
+		  <ion-card-content>
+			<p id="modal-description"></p>
+		  </ion-card-content>
+<ion-footer>
+		<ion-toolbar>
+		  <ion-buttons  slot="start">
+			<ion-button fill="clear">Chat Seller</ion-button>
+	      </ion-buttons>
+		  <ion-buttons  slot="end">
+			<ion-button fill="clear">Beli Item</ion-button>
+	      </ion-buttons>
+		</ion-toolbar>
+</ion-footer>
+	  </ion-card>
     </div>
     </ion-content>
   </div>
@@ -56,6 +71,7 @@
     const modalTitle = document.getElementById("modal-title");
     const modalImg = document.getElementById("modal-img");
     const modalPrice = document.getElementById("modal-price");
+    const modalStock = document.getElementById("modal-stok");
     const modalDescription = document.getElementById("modal-description");
 
     fetch(jsonUrl)
@@ -86,6 +102,7 @@
       modalTitle.textContent = product.title;
       modalImg.src = product.img;
       modalPrice.textContent = `Rp. ${product.harga}`;
+      modalStock.textContent = `Stock ${product.stok}`;
       modalDescription.textContent = product.description;
       productModal.present();
     };

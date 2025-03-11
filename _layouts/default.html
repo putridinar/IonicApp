@@ -8,25 +8,8 @@
 		<ion-content class="ion-padding">
 			<ion-tabs>
 				{{ content }}
+	<ion-text color="medium" class="text-style">Developed by <span id="text_dev">{{site.textDev}}</span></ion-text>
 {% include tab-bar-bottom.html %}
-
-  <!-- Modal -->
-  <ion-modal id="productModal">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title id="modalTitle">Produk</ion-title>
-        <ion-buttons slot="end">
-          <ion-button onclick="closeModal()">Close</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <img id="modalImage" src="" alt="Product Image" style="width: 100%;" />
-      <p id="modalDescription"></p>
-      <h2 id="modalPrice"></h2>
-    </ion-content>
-  </ion-modal>
-
 			</ion-tabs>
 		</ion-content>
 	</ion-app>
@@ -50,5 +33,6 @@
   }
 </script>
   <script src="{{ '/assets/js/app.js?v=0.1.0' | relative_url }}"></script>
+  <script src="{{ '/assets/js/simpleCart.js?v=1.1.0' | relative_url }}"></script>
 </body>
 </html>
