@@ -474,7 +474,7 @@ ion-modal {
 			background-position: center;
 			border-radius: 16px;
 			@include mobile {
-				width: 100%;
+				width: -webkit-fill-available;
 				height: 380px;
 			}
 		}
