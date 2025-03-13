@@ -1,4 +1,4 @@
-/* document.addEventListener("click", function() {
+document.addEventListener("click", function() {
     let elem = document.documentElement;
     
     if (!document.fullscreenElement && !document.webkitFullscreenElement) {
@@ -8,7 +8,7 @@
             elem.webkitRequestFullscreen();
         }
     }
-}); */
+});
 
     let backPressCount = 0;
 
