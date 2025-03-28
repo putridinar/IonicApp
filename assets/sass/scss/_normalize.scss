@@ -456,7 +456,7 @@ template {
   --border-radius: 0;
   --background: transparent;
 @include mobile {
-    --min-height: 100%;
+    --min-height: 90%;
     --min-width: 100%;
    }
 }
