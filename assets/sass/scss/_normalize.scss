@@ -460,6 +460,8 @@ template {
 ion-modal {
   --height: 100%;
   --width: 100%;
+ion-content {
+ height: 100vh;
 	div.modal-container {
 		display: flex;
 		align-items: flex-start;
@@ -483,6 +485,7 @@ ion-modal {
 			margin: 0 16px;
 		@include mobile {
 			margin: 16px 0;
+        }
 			}
 		}
 	}
