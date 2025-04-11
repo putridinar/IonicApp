@@ -10,7 +10,11 @@
 	  {% include perbaikan.html %}
   <ion-button expand="block" onclick="modal.isOpen = true">Open</ion-button>
       </div>
+	  {% include ion-modal.html %}
     </ion-content>
   </div>
 </ion-tab>
-	  {% include ion-modal.html %}
+
+<script>
+  var modal = document.querySelector('ion-modal');
+</script>
